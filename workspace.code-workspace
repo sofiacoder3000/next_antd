@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\dreamcode\\corserva\\conserva-amenities"
+		},
+		{
+			"path": "..\\..\\dreamcode\\aafaq-autofinance-monorepo"
+		},
+		{
+			"path": "..\\quizzlike-backend-mongodb"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {}
+}
