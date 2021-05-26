@@ -1,58 +1,110 @@
-import { Button, Space, DatePicker, Card, Avatar } from 'antd';
+import { Button, Space, DatePicker, Card, Avatar, List } from 'antd';
 import {
-	CiCircleFilled,
-	EditOutlined,
-	EllipsisOutlined,
-	SettingOutlined
+  CiCircleFilled,
+  EditOutlined,
+  EllipsisOutlined,
+  SettingOutlined
 } from '@ant-design/icons';
+import MenuDouble from '../components/MenuDouble';
+import FirstLayout from '../components/FirstLayout';
+import Navbar from '../components/Navbar';
+import Title from '../components/Title';
 
 const { Meta } = Card;
 
 export default function Home() {
-	const onChange = () => {};
-	return (
-		<div style={{ padding: 100 }}>
-			<h1>Prueba 001</h1>
-			<Space direction="vertical">
-				<Button type="primary">Primary Button</Button>
-				<Button type="ghost">Ghost Button</Button>
-				<DatePicker onChange={onChange} />
-				<CiCircleFilled />
-			</Space>
-			<Card
-				style={{ width: 300 }}
-				cover={
-					<img
-						alt="example"
-						src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-					/>
-				}
-				actions={[
-					<SettingOutlined key="setting" />,
-					<EditOutlined key="edit" />,
-					<EllipsisOutlined key="ellipsis" />
-				]}
-			>
-				<Meta
-					avatar={
-						<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
-					}
-					title="Card title"
-					description="This is the description"
-				/>
-			</Card>
-			<Card
-				hoverable
-				style={{ width: 240 }}
-				cover={
-					<img
-						alt="example"
-						src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
-					/>
-				}
-			>
-				<Meta title="Europe Street beat" description="www.instagram.com" />
-			</Card>
-		</div>
-	);
+  const quizzes = [
+    {
+      title: '¿Qué vas a vender después de las elecciones?',
+      cover_img:
+        'https://www.elpais.com.co/files/article_main/uploads/2017/02/05/5897d0341a59a.jpeg'
+    },
+    {
+      title: '¿Qué vas a vender después de las elecciones?',
+      cover_img:
+        'https://www.elpais.com.co/files/article_main/uploads/2017/02/05/5897d0341a59a.jpeg'
+    },
+    {
+      title: '¿Qué vas a vender después de las elecciones?',
+      cover_img:
+        'https://www.elpais.com.co/files/article_main/uploads/2017/02/05/5897d0341a59a.jpeg'
+    },
+    {
+      title: '¿Qué vas a vender después de las elecciones?',
+      cover_img:
+        'https://www.elpais.com.co/files/article_main/uploads/2017/02/05/5897d0341a59a.jpeg'
+    },
+    {
+      title: '¿Qué vas a vender después de las elecciones?',
+      cover_img:
+        'https://www.elpais.com.co/files/article_main/uploads/2017/02/05/5897d0341a59a.jpeg'
+    },
+    {
+      title: '¿Qué vas a vender después de las elecciones?',
+      cover_img:
+        'https://www.elpais.com.co/files/article_main/uploads/2017/02/05/5897d0341a59a.jpeg'
+    },
+    {
+      title: '¿Qué vas a vender después de las elecciones?',
+      cover_img:
+        'https://www.elpais.com.co/files/article_main/uploads/2017/02/05/5897d0341a59a.jpeg'
+    },
+    {
+      title: '¿Qué vas a vender después de las elecciones?',
+      cover_img:
+        'https://www.elpais.com.co/files/article_main/uploads/2017/02/05/5897d0341a59a.jpeg'
+    },
+    {
+      title: '¿Qué vas a vender después de las elecciones?',
+      cover_img:
+        'https://www.elpais.com.co/files/article_main/uploads/2017/02/05/5897d0341a59a.jpeg'
+    },
+    {
+      title: '¿Qué vas a vender después de las elecciones?',
+      cover_img:
+        'https://www.elpais.com.co/files/article_main/uploads/2017/02/05/5897d0341a59a.jpeg'
+    },
+    {
+      title: '¿Qué vas a vender después de las elecciones?',
+      cover_img:
+        'https://www.elpais.com.co/files/article_main/uploads/2017/02/05/5897d0341a59a.jpeg'
+    },
+    {
+      title: '¿Qué vas a vender después de las elecciones?',
+      cover_img:
+        'https://www.elpais.com.co/files/article_main/uploads/2017/02/05/5897d0341a59a.jpeg'
+    },
+    {
+      title: '¿Qué vas a vender después de las elecciones?',
+      cover_img:
+        'https://www.elpais.com.co/files/article_main/uploads/2017/02/05/5897d0341a59a.jpeg'
+    },
+    {
+      title: '¿Qué vas a vender después de las elecciones?',
+      cover_img:
+        'https://www.elpais.com.co/files/article_main/uploads/2017/02/05/5897d0341a59a.jpeg'
+    },
+    {
+      title: '¿Qué vas a vender después de las elecciones?',
+      cover_img:
+        'https://www.elpais.com.co/files/article_main/uploads/2017/02/05/5897d0341a59a.jpeg'
+    }
+  ];
+
+  const onChange = () => {};
+  return (
+    <div style={{ padding: 10 }}>
+      <Navbar />
+      <Title>Quizz Like!</Title>
+      <Space direction="vertical">
+        {/*         <Button type="primary">Primary Button</Button>
+         */}{' '}
+        <Button type="ghost">Ghost Button</Button>
+        <DatePicker onChange={onChange} />
+        <CiCircleFilled />
+      </Space>
+      <FirstLayout props={{ quizzes, name: 'kathy' }} />
+      {/* <div style={{ display: 'flex' }}>{cardsQuizzes}</div> */}
+    </div>
+  );
 }
