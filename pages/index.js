@@ -9,6 +9,8 @@ import MenuDouble from '../components/MenuDouble';
 import FirstLayout from '../components/FirstLayout';
 import Navbar from '../components/Navbar';
 import Title from '../components/Title';
+import Pagination from '../components/PaginationQuizz';
+import PaginationQuizz from '../components/PaginationQuizz';
 
 const { Meta } = Card;
 

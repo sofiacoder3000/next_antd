@@ -1,6 +1,7 @@
 import React from 'react';
 import { Layout, List, Card, Button } from 'antd';
 import MenuDouble from './MenuDouble';
+import PaginationQuizz from './PaginationQuizz';
 
 const { Header, Content, Footer, Sider } = Layout;
 const { Meta } = Card;
@@ -52,6 +53,7 @@ export default function FirstLayout({ props }) {
                   </List.Item>
                 )}
               />
+              <PaginationQuizz />
             </div>
           </Content>
           <Footer style={{ textAlign: 'center' }}>
