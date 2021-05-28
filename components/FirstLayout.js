@@ -2,6 +2,7 @@ import React from 'react';
 import { Layout, List, Card, Button } from 'antd';
 import MenuDouble from './MenuDouble';
 import PaginationQuizz from './PaginationQuizz';
+import Link from 'next/link';
 
 const { Header, Content, Footer, Sider } = Layout;
 const { Meta } = Card;
@@ -48,7 +49,12 @@ export default function FirstLayout({ props }) {
                   <List.Item>
                     <Card cover={<img alt={quiz.title} src={quiz.cover_img} />}>
                       <Meta title={quiz.title} description="" />
-                      <Button type="primary">Play Now!</Button>
+                      <Link
+                        href="/quizzes/[id]"
+                        as={`/quizzes/${quiz.title}${quiz.cover_img}`}
+                      >
+                        <Button type="primary">Play Now!</Button>
+                      </Link>
                     </Card>
                   </List.Item>
                 )}
